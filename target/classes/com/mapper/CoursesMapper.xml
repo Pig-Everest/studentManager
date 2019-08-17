@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.CoursesMapper">
+    <select id="selectAllNames" resultType="String">
+        select coursesname from courses where coursesname like #{name} group by coursesname
+    </select>
+    <select id="selectAllNames1" resultType="String">
+        select coursesname from courses group by coursesname
+    </select>
+</mapper>
